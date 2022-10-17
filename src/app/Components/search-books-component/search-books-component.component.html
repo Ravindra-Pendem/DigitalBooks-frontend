@@ -1,0 +1,46 @@
+<mat-card class="search-card">
+  <mat-card-header>
+    <mat-card-title>Search Books</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="card-style">
+    <div class="row">
+      <div class="col-md-3">Title : </div>
+      <div class="col-md-7">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Title" #title>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">Category : </div>
+      <div class="col-md-7">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Category" #category>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">Author : </div>
+      <div class="col-md-7">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Author" #author>
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions style="margin-left: 60%;">
+    <button class="button-css" mat-raised-button
+      (click)="getBooks(title.value, category.value, author.value)">Search</button>
+  </mat-card-actions>
+</mat-card>
+
+<!-- <div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let book of books">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="card-title"></div>
+        <div class="card-image"></div>
+      </div>
+    </div>
+  </div>
+</div> -->

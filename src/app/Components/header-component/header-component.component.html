@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-background">
+    <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link navbar-text" routerLink="/home" routerLinkActive="active"><button
+                    mat-flat-button>Home</button></a></li>
+        <li class="nav-item" *ngIf="_authService.loggedIn()"><a class="nav-link navbar-text" routerLink="/addBook" routerLinkActive="active"><button
+                    mat-flat-button>Author Page</button></a></li>
+        <li class="nav-item" *ngIf="!_authService.loggedIn()"><a class="nav-link navbar-text" routerLink="/login" routerLinkActive="active"><button
+                    mat-flat-button>Author Login/Signup</button></a></li>
+        <li class="nav-item" *ngIf="_authService.loggedIn()"><a class="nav-link navbar-text" (click)="_authService.logoutUser()"><button
+                    mat-flat-button>Logout</button></a></li>
+    </ul>
+</nav>
