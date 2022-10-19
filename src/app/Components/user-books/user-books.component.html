@@ -1,0 +1,16 @@
+<div class="row">
+  <h2>My Subscriptions : </h2>
+</div>
+<div class="row mt-5" *ngIf="books != undefined">
+    <div class="col-md-3 mb-3" *ngFor="let book of books">
+      <div class="card text-center">
+        <div class="card-body">
+          <div class="card-title">{{book.title}}</div>
+          <div class="card-name">{{book.author}}</div>
+          <div class="card-price">${{book.price}}</div>
+          <div class="card-image"><img class="img-style" src="../../../assets/images/{{book.imageUrl}}" /></div>
+          <!-- <div class="card-button"><button mat-raised-button class="subscribe-button" (click)="navigateToUser(book)">Subscribe</button></div> -->
+        </div>
+      </div>
+    </div>
+</div>

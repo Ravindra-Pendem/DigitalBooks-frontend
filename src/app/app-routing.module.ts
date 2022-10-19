@@ -4,6 +4,8 @@ import { CreateBookComponent } from './Components/create-book/create-book.compon
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { SearchBooksComponentComponent } from './Components/search-books-component/search-books-component.component';
+import { UserBooksComponent } from './Components/user-books/user-books.component';
+import { UserComponent } from './Components/user/user.component';
 import { AuthGuard } from './Services/auth.guard';
 
 const routes: Routes = [
@@ -11,7 +13,9 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'addBook', component: CreateBookComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  {path: 'subscribe', component: UserComponent},
+  { path: 'userBooks', component: UserBooksComponent}
 ];
 
 @NgModule({

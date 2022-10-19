@@ -21,7 +21,7 @@
         </div>
     </mat-card-content>
     <mat-card-actions>
-        <button class="button-css" mat-raised-button>Already have an account? Login</button>
+        <button class="button-css" mat-raised-button (click)="routeToLogin()">Already have an account? Login</button>
         <button class="button-css" mat-raised-button
             (click)="registerUser(username.value, password.value)" style="margin-left: 10%;">Register</button>
     </mat-card-actions>

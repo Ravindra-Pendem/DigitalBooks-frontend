@@ -61,6 +61,9 @@ import { AuthService } from './Services/auth.service';
 import { BookService } from './Services/book.service';
 import { AuthGuard } from './Services/auth.guard';
 import { TokenInterceptorService } from './Services/token-interceptor.service';
+import { UserComponent } from './Components/user/user.component';
+import { UserService } from './Services/user.service';
+import { UserBooksComponent } from './Components/user-books/user-books.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,9 @@ import { TokenInterceptorService } from './Services/token-interceptor.service';
     FooterComponentComponent,
     CreateBookComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserComponent,
+    UserBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -125,7 +130,7 @@ import { TokenInterceptorService } from './Services/token-interceptor.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService, AuthGuard, BookService, 
+  providers: [AuthService, AuthGuard, BookService,UserService,
     {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,

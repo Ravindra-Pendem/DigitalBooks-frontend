@@ -8,7 +8,6 @@
 
 .search-card {
     margin: 20px 20px;
-    max-width: 500px;
 }
 .card-style{
     margin-left: 40px;
@@ -21,4 +20,11 @@
     background: #7395AE;
     color: white;
     margin-top: 10px;
+    margin-left: 45px;
+}
+.find-button{
+    background: #7395AE;
+    color: white;
+    margin-top: 10px;
+    margin-left: 80%; 
 }

@@ -1,0 +1,41 @@
+<mat-card class="search-card">
+    <mat-card-header>
+        <mat-card-title *ngIf="!_userUrl.subscribed">Subscribe Book</mat-card-title>
+        <mat-card-title *ngIf="_userUrl.subscribed">Find Book</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card-style" [formGroup]="userForm">
+        <div class="row">
+            <div class="col-md-5" *ngIf="!_userUrl.subscribed">
+                <div class="row">
+                    <div class="col-md-3">Name : </div>
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="Name" formControlName="name">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-3">Email : </div>
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="Email" formControlName="mail">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="!_userUrl.subscribed">
+            <div class="col-md-7"></div>
+            <div class="col-md-1">
+                <button class="subscribe-button" mat-raised-button (click)="subscribeBook()">Subscribe</button>
+            </div>
+        </div>
+        <div class="row" *ngIf="_userUrl.subscribed">
+            <div class="col-md-4">
+                <button class="find-button" mat-raised-button (click)="findBooks()">Find</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
